@@ -1,4 +1,4 @@
-function age (questions, agree, disAgree ) {
+const age  = (questions, agree, disAgree )  => {
     let age = prompt(questions);
     if(confirm(age)){
         agree();
@@ -8,11 +8,11 @@ function age (questions, agree, disAgree ) {
     }
 }
 
-function showAgree() {
+const showAgree = ()  => {
     alert("Age is verified");
 }
 
-function showDisagree() {
+const showDisagree = () => {
     alert("Age is not verified");
 }
 
