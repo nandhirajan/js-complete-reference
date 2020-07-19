@@ -1,16 +1,20 @@
-// let age = prompt("How old are you?", 50);
-// let isUserConfirmed = confirm(`Are you sure you reached ${age}`);
+function age (questions, agree, disAgree ) {
+    let age = prompt(questions);
+    if(confirm(age)){
+        agree();
+    }
+    else{
+        disAgree();
+    }
+}
 
-// if (isUserConfirmed) {
-//     alert(`You are ${age} year old!`);
-// }
-// else {
-//     alert("You entered incorrect age!");
-// }
+function showAgree() {
+    alert("Age is verified");
+}
 
-let num1 ;
-let num2 = prompt("Input number 2");
+function showDisagree() {
+    alert("Age is not verified");
+}
 
-// let result = (num1 !== "" && num1 !== null && num1 !== undefined) ? num1 : num2;
-let result = num1 ?? num2;
-alert(`First non null value ${result}`);
+let questions ="How old are you?";
+age(questions, showAgree, showDisagree);
