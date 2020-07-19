@@ -1,12 +1,9 @@
 let user = {
-    name : "nandhi"
+    name : "nandhi",
+    sayHello() {
+        alert(this.name);
+    }
 };
-
-const sayHello = () => {
-    alert("Hello");
-}
-
-user.sayHello = sayHello;
 
 user.sayHello();
 
