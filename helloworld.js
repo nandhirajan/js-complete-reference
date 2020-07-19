@@ -5,9 +5,10 @@ let employee = {
     }
 };
 // let admin = employee;
-let admin = Object.assign({}, employee);
+// let admin = Object.assign({}, employee);
+let admin = JSON.parse(JSON.stringify(employee));
 
 if (employee.marks == admin.marks)
     alert("Shallow copy");
 else
-    alert("clone object");
+    alert("Deep clone");
