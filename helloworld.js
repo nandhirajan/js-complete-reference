@@ -1,20 +1,7 @@
-const age  = (questions, agree, disAgree )  => {
-    let age = prompt(questions);
-    if(confirm(age)){
-        agree();
-    }
-    else{
-        disAgree();
-    }
-}
+let employee = { name : "nandhi" };
+let admin = employee;
 
-const showAgree = ()  => {
-    alert("Age is verified");
-}
-
-const showDisagree = () => {
-    alert("Age is not verified");
-}
-
-let questions ="How old are you?";
-age(questions, showAgree, showDisagree);
+if ( employee == admin )
+    alert("copy by reference");
+else   
+    alert("clone object");
